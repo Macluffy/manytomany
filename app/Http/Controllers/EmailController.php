@@ -15,11 +15,11 @@ class EmailController extends Controller
             "phone"=>$request->phone,
             "message"=>$request->message,
         ];
-
+        
     Mail::to('ahriga.a@hotmail.com')->send(new Email($contenuMail));
 
     
-    return "message envoyé";
+    return redirect()->back();
     }
 
 }
